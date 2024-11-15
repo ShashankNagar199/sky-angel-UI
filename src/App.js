@@ -176,6 +176,7 @@ function App() {
 
   // Submit score to mock server using fetch
   const submitScore = async (name) => {
+    setIsSubmitting(true); // Disabling the button immediately after submission starts
     try {
       const payload = JSON.stringify({ name, time, stars });
       console.log("Payload:", payload); // Debugging log
